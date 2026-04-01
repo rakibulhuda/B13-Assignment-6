@@ -7,6 +7,7 @@ import Stats from "./components/Stats.jsx";
 import ProductsSection from "./components/ProductsSection.jsx";
 import Steps from "./components/Steps.jsx";
 import Pricing from "./components/Pricing.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
     const [cartItems, setCartItems] = useState([]);
@@ -25,6 +26,7 @@ function App() {
             />
             <Steps />
             <Pricing />
+            <Footer />
         </div>
     );
 }
