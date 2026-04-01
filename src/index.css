@@ -504,3 +504,90 @@ body {
     font-size: 14px;
     color: #9CA3AF;
 }
+
+/* ===== STEPS ===== */
+.steps-section {
+    background-color: #F9FAFB;
+    padding: 80px 0;
+}
+
+.steps-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.steps-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.steps-subtitle {
+    font-size: 15px;
+    color: #6B7280;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.step-card {
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 32px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.step-number {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(87.40deg, rgba(79, 57, 246, 1), rgba(149, 20, 250, 1));
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: #EDE9FE;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.step-description {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.7;
+    max-width: 240px;
+}
