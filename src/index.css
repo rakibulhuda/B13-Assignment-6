@@ -952,3 +952,294 @@ body {
 .footer-bottom--link:hover {
     color: #ffffff;
 }
+
+
+/* =============================================
+   RESPONSIVE STYLES — TABLET & MOBILE ONLY
+   Desktop (>1024px) is untouched above.
+   ============================================= */
+
+/* ── TABLET  (≤1024px) ── */
+@media (max-width: 1024px) {
+
+    /* Navbar */
+    .max-w-7xl {
+        padding: 0 32px !important;
+    }
+
+    /* Banner */
+    .banner-heading {
+        font-size: 40px;
+    }
+
+    /* Stats */
+    .stat-item {
+        padding: 0 40px;
+    }
+
+    /* Products grid → 2 columns */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Steps grid → 2 columns */
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing grid → stack vertically, remove scale effect */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .pricing-card--highlight {
+        transform: scale(1);
+    }
+
+    /* Footer grid → 2 columns */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* ── MOBILE  (≤768px) ── */
+@media (max-width: 768px) {
+
+    /* Global padding reset for all inner containers */
+    .max-w-7xl {
+        padding: 0 20px !important;
+    }
+
+    /* ── Navbar ── */
+    /* Already handled via md:hidden Tailwind classes in JSX */
+
+    /* ── Banner ── */
+    .banner-heading {
+        font-size: 32px;
+    }
+
+    .banner-description {
+        font-size: 14px;
+    }
+
+    /* Banner section itself */
+    section[style*="padding: '80px 0'"] {
+        padding: 48px 0;
+    }
+
+    /* ── Stats ── */
+    .stats-section {
+        padding: 60px 0;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .stat-item {
+        padding: 0;
+    }
+
+    .stat-divider {
+        width: 60px;
+        height: 1px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    /* ── Products ── */
+    .products-section {
+        padding: 56px 0;
+    }
+
+    .products-title {
+        font-size: 26px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Cart ── */
+    .cart-container {
+        padding: 20px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cart-item--remove {
+        margin-left: auto;
+    }
+
+    /* ── Steps ── */
+    .steps-section {
+        padding: 56px 0;
+    }
+
+    .steps-title {
+        font-size: 26px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Pricing ── */
+    .pricing-section {
+        padding: 56px 0 80px 0;
+    }
+
+    .pricing-title {
+        font-size: 26px;
+    }
+
+    .pricing-grid {
+        max-width: 100%;
+    }
+
+    .pricing-card--highlight {
+        transform: scale(1);
+    }
+
+    /* ── Footer CTA ── */
+    .footer-cta {
+        padding: 80px 20px;
+    }
+
+    .footer-cta--title {
+        font-size: 24px;
+    }
+
+    .footer-cta--buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-cta--btn-outline,
+    .footer-cta--btn-border {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    /* ── Footer Main ── */
+    .footer-main {
+        padding: 48px 0 0 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .footer-bottom--links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/* ── Banner layout override (inline styles need class-level overrides) ── */
+/* The Banner uses inline flex + gap that must stack on mobile */
+@media (max-width: 768px) {
+    /* Force banner inner flex row → column */
+    .banner-inner {
+        flex-direction: column !important;
+        gap: 32px !important;
+    }
+
+    /* Left content: full width, centered text */
+    .banner-left {
+        max-width: 100% !important;
+        text-align: center;
+    }
+
+    /* Badge centering */
+    .banner-left .banner-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Buttons row: center */
+    .banner-left .flex.items-center {
+        justify-content: center;
+    }
+
+    /* Right image: full width, centered */
+    .banner-right {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .banner-right img {
+        max-width: 340px !important;
+        width: 100% !important;
+    }
+}
+
+/* ── SMALL MOBILE  (≤480px) ── */
+@media (max-width: 480px) {
+
+    /* Banner */
+    .banner-heading {
+        font-size: 26px;
+    }
+
+    .btn-gradient,
+    .btn-outline-watch {
+        font-size: 13px;
+        padding: 9px 16px;
+    }
+
+    /* Stats */
+    .stat-number {
+        font-size: 30px;
+    }
+
+    /* Product card */
+    .product-price--amount {
+        font-size: 22px;
+    }
+
+    /* Pricing amount */
+    .pricing-amount {
+        font-size: 36px;
+    }
+
+    /* Steps title / pricing title */
+    .steps-title,
+    .pricing-title,
+    .products-title {
+        font-size: 22px;
+    }
+
+    /* Footer CTA title */
+    .footer-cta--title {
+        font-size: 20px;
+    }
+}

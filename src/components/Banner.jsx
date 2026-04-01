@@ -1,14 +1,14 @@
-import bannerImg from '../assets/banner.png';
-import playIcon from '../assets/Play.png';
+import bannerImg from '../../public/assets/banner.png';
+import playIcon from '../../public/assets/Play.png';
 
 const Banner = () => {
     return (
         <section style={{ backgroundColor: '#ffffff', padding: '80px 0' }}>
             <div className="max-w-7xl mx-auto" style={{ padding: '0 150px' }}>
-                <div className="flex items-center justify-between" style={{ gap: '60px' }}>
+                <div className="banner-inner flex items-center justify-between" style={{ gap: '60px' }}>
 
                     {/* Left Content */}
-                    <div style={{ flex: 1, maxWidth: '520px' }}>
+                    <div className="banner-left" style={{ flex: 1, maxWidth: '520px' }}>
 
                         {/* Badge */}
                         <div className="banner-badge">
@@ -39,7 +39,7 @@ const Banner = () => {
                     </div>
 
                     {/* Right Image */}
-                    <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+                    <div className="banner-right" style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
                         <img
                             src={bannerImg}
                             alt="Digital Workflow"

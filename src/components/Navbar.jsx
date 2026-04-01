@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import shoppingCart from '../../public/assets/products/shopping-cart.png';
 
 const Navbar = ({ cartCount }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ const Navbar = ({ cartCount }) => {
 
                         {/* Cart Icon */}
                         <div className="relative cursor-pointer">
-                            <img src="../../src/assets/products/shopping-cart.png" alt="cart" style={{ width: '24px', height: '24px' }} />
+                            <img src={shoppingCart} alt="cart" style={{ width: '24px', height: '24px' }} />
                             {cartCount > 0 && (
                                 <span className="cart-badge">{cartCount}</span>
                             )}
@@ -40,7 +41,7 @@ const Navbar = ({ cartCount }) => {
                     {/* Mobile: Cart + Hamburger */}
                     <div className="md:hidden flex items-center" style={{ gap: '12px' }}>
                         <div className="relative cursor-pointer">
-                            <img src="../../src/assets/products/shopping-cart.png" alt="cart" style={{ width: '24px', height: '24px' }} />
+                            <img src={shoppingCart} alt="cart" style={{ width: '24px', height: '24px' }} />
                             {cartCount > 0 && (
                                 <span className="cart-badge">{cartCount}</span>
                             )}
