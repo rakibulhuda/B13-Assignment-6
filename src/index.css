@@ -25,7 +25,8 @@ body {
     transition: color 0.2s;
 }
 .nav-link:hover {
-    color: #111827;
+    color: #7C3AED;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.5), 0 0 20px rgba(124, 58, 237, 0.3);
 }
 
 .nav-login {
@@ -44,12 +45,23 @@ body {
     background: linear-gradient(87.40deg, rgba(79, 57, 246, 1), rgba(149, 20, 250, 1));
     color: #ffffff;
     font-weight: 600;
-    padding: 8px 20px;
+    padding: 10px 20px;
     border-radius: 9999px;
     font-size: 14px;
     border: none;
     cursor: pointer;
     white-space: nowrap;
+}
+
+.btn-gradient:hover {
+    opacity: 0.9; /* Slightly lighter */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.4); /* Purple glow */
+}
+
+.btn-gradient:active {
+    transform: translateY(0); /* Press down effect */
+    opacity: 1;
 }
 
 .cart-badge {
@@ -160,7 +172,7 @@ body {
     background: transparent;
     color: #374151;
     font-weight: 600;
-    padding: 8px 20px;
+    padding: 10px 20px;
     border-radius: 9999px;
     font-size: 14px;
     cursor: pointer;
@@ -176,7 +188,7 @@ body {
 /* ===== STATS ===== */
 .stats-section {
     background: linear-gradient(87.40deg, rgba(79, 57, 246, 1), rgba(149, 20, 250, 1));
-    padding: 56px 0;
+    padding: 120px 0;
 }
 
 .stats-grid {
@@ -484,6 +496,8 @@ body {
 }
 
 .cart-empty {
+    border: #eff1f3 solid 3px;
+    border-radius: 20px;
     text-align: center;
     padding: 60px 0;
 }

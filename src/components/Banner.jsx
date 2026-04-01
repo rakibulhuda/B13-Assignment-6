@@ -18,7 +18,7 @@ const Banner = () => {
 
                         {/* Heading */}
                         <h1 className="banner-heading">
-                            Supercharge Your Digital Workflow
+                            Supercharge Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#4F39F6] to-[#9514FA]">Digital Workflow </span>
                         </h1>
 
                         {/* Description */}
